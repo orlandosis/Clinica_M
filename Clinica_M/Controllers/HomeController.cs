@@ -13,10 +13,10 @@ namespace Clinica_M.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
 
         public IActionResult Index()
         {
@@ -26,6 +26,11 @@ namespace Clinica_M.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+        public ActionResult Details(int Id)
+        {
+            var product = new Product(Id, "Laptop");
+            return View("Details", product);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
