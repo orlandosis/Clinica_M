@@ -20,7 +20,7 @@ namespace Clinica_M.Controllers
 
         public IActionResult Index()
         {
-             View();
+             
         }
 
         public IActionResult Privacy()
